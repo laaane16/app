@@ -1,0 +1,38 @@
+.nav{
+    &__list{
+        display: flex;
+        flex-direction: row;
+        color: $color-white;
+        &.black{
+            color: $color-black
+        }
+    }
+    &__item{
+        position: relative;
+        @include font-size(14, 16, 1);
+        font-weight: 600;
+        transition-property: opacity;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            opacity: .8;
+        }
+        &::before{
+            content: '';
+            transition: transform .3s ease-in-out;
+            transform: translateX(-50%) scaleX(0%);
+
+        }
+        &.active::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: calc(100% + 4px) ;
+            transform: translateX(0) scaleX(100%);
+            border-bottom: 3px solid $color-beige;
+        }
+    }
+    &__item:not(:last-child){
+        margin-right: 73px;
+    }
+}

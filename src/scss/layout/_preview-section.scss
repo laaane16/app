@@ -1,0 +1,46 @@
+.preview{
+    &__content{
+        position: relative;
+        padding: 157px 124px;
+        background-color: ($color-light-gray);
+        background-image: url('./../assets/img/Rectangle 46.jpg');
+        background-position: right;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    &__img{
+        z-index: 0;
+        width: 624px;
+        height: 579px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__info{
+        z-index: 10;
+        position: relative;
+    }
+    &__title{
+        position: relative;
+        @include font-size(48, 48, 0);
+        font-weight:400;
+        padding-bottom: 48px;
+        margin-bottom: 38px;
+    }
+    &__title::before{
+        content: '';
+        width: 207px;
+        position: absolute;
+        bottom: 0;
+        border-bottom: 5px solid $color-beige;
+    }
+    &__descrip{
+        max-width: 513px;
+        margin-bottom: 48px;
+    }
+    &__price{
+        @include font-size(30, 24, 0);
+        font-weight: 500;
+    }
+}

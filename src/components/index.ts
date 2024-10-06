@@ -1,0 +1,32 @@
+export { default as Image } from "./UI/image/Image";
+export {default as masterImage} from './../assets/img/master.jpg'
+export { default as masterPhoto } from "./../assets/img/FirstCategoriesSliderImage.jpg";
+export { default as crossPhoto } from "./../assets/img/SecondCategoriesSliderImage.jpg";
+export { default as doubleCrossPhoto } from "./../assets/img/ThirdCategoriesSliderImage.jpg";
+export { default as MySelect } from "../components/UI/select/MySelect";
+export { default as Counter } from "../components/UI/counter/Counter";
+export { default as MyButton } from "../components/UI/button/MyButton";
+export { default as CardPageSkeleton } from "../components/skeletons/CardPageSkeleton";
+export { default as CartCounter } from "../components/UI/counter/CartCounter";
+export { default as Close } from "../components/UI/icons/Close";
+export { default as Total } from "../components/Total/Total";
+export { default as CardsCategories } from "../components/CardsCategories";
+export { default as CardList } from "../components/CardList";
+export { default as MyInput } from "../components/UI/input/MyInput";
+export { default as ContactsSection } from "../components/ContactsSection";
+export { default as AboutSectionList } from "./AboutSectionList";
+export { default as SectionAboutSecondItem } from "./UI/icons/SectionAboutSecondItem";
+export { default as SectionAboutFirstItem } from "./UI/icons/SectionAboutFirstItem";
+export { default as SectionAboutThirdItem } from "./UI/icons/SectionAboutThirdItem";
+export {default as CardSkeleton} from "./skeletons/CardSkeleton";
+export {default as Card} from './Card';
+export {default as Facebook} from "./UI/icons/Facebook";
+export {default as Vk} from "./UI/icons/Vk";
+export {default as Inst} from "./UI/icons/Inst";import Navbar from "./UI/navbar/Navbar";
+export {default as Menu }from "./UI/icons/Menu";
+export {default as PersonAcc} from "./UI/icons/PersonAcc";
+export {default as Whatsapp} from "./UI/icons/Whatsapp";
+export {default as Cart}from "./UI/icons/Cart";
+export {default as LogoWhite} from "./UI/icons/LogoWhite";
+export {default as LogoBlack} from "./UI/icons/LogoBlack";
+export {default as Navbar} from './UI/navbar/Navbar'

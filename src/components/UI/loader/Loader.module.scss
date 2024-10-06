@@ -1,0 +1,30 @@
+.container{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-left-color: white;
+    animation-name: load;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes load{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

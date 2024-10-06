@@ -1,0 +1,58 @@
+$title-line-height: 21px;
+
+.accordeon{
+    width: 100%;
+    height: 100%;
+    &__item{
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        transition: border-color .2s ease-in-out;
+        &:not(:last-child){
+            margin-bottom: 45px;
+        }
+        &.active{
+            border-color:#EAD6BD;
+        }
+    }
+    &__title{
+        font-size: 14px;
+        line-height: $title-line-height;
+        letter-spacing: .02em;
+        font-weight: 600;
+        padding-bottom: 16px;
+
+    }
+    &__item.active &__collapse{
+
+    }
+    &__collapse{
+        overflow: hidden;
+        height: 0;
+        transition: height .2s;
+    }   
+    &__body{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        padding-bottom: 21px;
+    }
+    &__item.active &__arrow {
+        transform: rotate(180deg) translate(0, 5px);
+    }
+    &__item.active &__arrow path{
+        stroke: #989C9F;
+    }
+    &__arrow{
+        position: absolute;
+        top: calc($title-line-height / 2);
+        transform: translate(0, -50%);
+        right: 0;
+        transition: transform .2s ease-in-out;
+        & path{
+            transition: stroke .2s ease-in-out;
+        }
+    }
+
+}

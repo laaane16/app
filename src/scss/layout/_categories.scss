@@ -1,0 +1,76 @@
+.categories{
+    &__content{
+        display: grid;
+        min-height: 821px;
+        grid-template-areas: 
+            'el-1 el-1 el-2 el-3 el-4'
+            'el-1 el-1 el-5 el-5 el-4'
+            'el-6 el-6 el-5 el-5 el-7'
+        ;
+        gap: 33px;
+        grid-template-rows: repeat(3, 268px);
+        grid-template-columns:repeat(5, 268px) ;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 32px 40px;
+        background-color: $color-light-gray;
+        &-info{
+            @include font-size(16, 3.5, 3);
+            font-weight: 600;
+        }
+        &-img{
+            width: 315px;
+            height: 283px;
+        }
+        &-title{
+            @include font-size(32, 40.5, 0);
+            font-weight: 300;
+            max-width: 295px;
+            margin-bottom: 28px
+        }
+        &-descrip{
+            @include font-size(24, 24, 0);
+            font-weight: 500;
+        }
+
+    }
+    &__item:nth-child(1){
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    &__item:nth-child(5){
+        padding: 0;
+    }
+    &__item-box{
+        width: 100%;
+    }
+    @for $i from 1 through 7{
+        &__item:nth-child(#{$i}){
+            grid-area: el-#{$i};
+        }
+    }
+
+    &__carousel{
+        &-item{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+    .swiper-pagination-bullet{
+        background: var(--swiper-pagination-bullet-inactive-color, white) ;
+        opacity: var(--swiper-pagination-bullet-opacity, 1);
+        &-active{
+            background: var(--swiper-pagination-color, transparent);
+            width: 7px;
+            height: 7px;
+            outline: 1px solid white;
+        }
+    }
+}

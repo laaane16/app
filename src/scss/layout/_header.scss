@@ -1,0 +1,113 @@
+.header {
+  z-index: 1;
+  width: 100%;
+  &__logo {
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  &__content {
+    padding: 34px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    &-phone {
+      color: white;
+      @include font-size(14, 16, 1);
+      font-weight: 600;
+      margin-right: 50px;
+      transition: opacity 0.2s ease-in-out;
+      &.black {
+        color: black;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &-whatsapp {
+      line-height: 0;
+      transition: opacity 0.2s ease-in-out;
+      &.black path {
+        fill: black;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    a {
+      line-height: 0px;
+      margin-right: 50px;
+    }
+    &-cart {
+      position: relative;
+      color: white;
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+      &.active path {
+        fill: $color-beige;
+      }
+      &.active{
+        color: $color-beige;
+      }
+      &.active &-count-container{
+        background-color: white;
+        border: 1px solid $color-beige;
+      }
+
+      &.black path {
+        fill: black;
+      }
+      &.black{
+        color: black;
+      }
+      &.black &-count-container{
+        background-color: white;
+        border: 1px solid black;
+      }
+      &-count-container{
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 800;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid white;
+        left: 65%;
+        top: -30%;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-pers-acc {
+      transition: opacity 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+      &.black path {
+        fill: black;
+      }
+    }
+  }
+  &.absolute {
+    position: absolute;
+  }
+}

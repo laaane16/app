@@ -1,0 +1,48 @@
+.catalog{
+    &__show-more{
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid $color-medium-gray;
+        padding: 25px;
+        @include font-size(16, 24, 0);
+        transition: border-color ease-in-out .2s;
+        margin-bottom: 40px;
+        & p{
+            position: relative;
+            width: max-content;
+            margin: 0px auto;
+            padding-left: 34px;
+            &:before{
+                position: absolute;
+                left: 0;
+                content: '';
+                background-image: url('./../assets/icons/load.svg');
+                width: 24px;
+                height: 24px;
+            }
+        }
+    &:hover{
+        & p::before{
+            animation-name: rotate;
+            animation-timing-function: linear;
+            animation-duration: 1.5s;
+    
+        }
+        &{
+            border-color: $color-dark-gray;
+        }
+    } 
+
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

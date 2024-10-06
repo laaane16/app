@@ -1,0 +1,35 @@
+.hero{    
+    background-image: url(../assets/img/bg.jpg), url(../assets/img/bg2.jpg);
+    background-size: 50% 100%, 50%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+
+    &__content{
+        // position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: end;
+        padding-bottom: 78px;
+    }
+    &__list{
+        // position: absolute;
+        // bottom: 78px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 358px;
+        color: $color-white;
+        &-title{
+            @include font-size(18, 56, 4);
+            font-weight: 700;
+        }
+        &-descrip{
+            @include font-size(16, 24);
+        }
+    }
+    &__item:nth-child(2){
+        text-align: end;
+    }
+}

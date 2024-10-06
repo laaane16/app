@@ -1,0 +1,113 @@
+.payment {
+    padding: 108px 0px 116px 0px;
+  &__content {
+    display: grid;
+    grid-template-areas:
+      "u o"
+      "w o";
+    border: 1px solid $color-medium-gray;
+  }
+  &__box {
+    padding: 40px;
+  }
+  &__order {
+    border-left: 1px solid $color-medium-gray;
+    grid-area: o;
+    &-list {
+      margin-bottom: 60px;
+    }
+    &-item {
+      padding: 17px 0px;
+      display: flex;
+      border-bottom: 1px solid $color-medium-gray;
+    }
+    &-img {
+      width: 77px;
+      height: 74px;
+      object-fit: contain;
+      margin-right: 18px;
+    }
+    &-info {
+      width: 100%;
+      padding-top: 17px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-title {
+      flex-grow: 1;
+      max-width: 200px;
+      @include font-size(16, 24);
+    }
+    &-price {
+      @include font-size(16, 24);
+      font-weight: 500;
+    }
+    &-close {
+      cursor: pointer;
+      transform: translateY(3px);
+      height: min-content;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+    }
+    &-total{
+        width: 100%;
+    }
+  }
+  &__ways {
+    grid-area: w;
+    &-fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+    &-title{
+        margin-bottom: 42px;
+    }
+    &-card{
+        &-label{
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-radio{
+        margin-right: 23px;
+    }
+
+    &-list{
+        padding-left: 29px;
+        display: flex;
+    }
+    &-item{
+        width: 26px;
+        height: 16px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+        &:nth-child(1){
+            background-image: url('./../assets/icons/visa.svg');
+        }
+        &:nth-child(2){
+            background-image: url('./../assets/icons/amex.svg');
+        }
+        &:nth-child(3){
+            background-image: url('./../assets/icons/mastercard.svg');
+        }
+    }
+  }
+  &__user {
+    border-bottom: 1px solid $color-medium-gray;
+    grid-area: u;
+  }
+  &__title {
+    @include font-size(18, 28, 0.5);
+    font-weight: 600;
+  }
+  &__user-title {
+    margin-bottom: 38px;
+  }
+  &__user-form-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+  }
+}

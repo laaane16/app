@@ -1,0 +1,26 @@
+.error-page{
+    &__content{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__text{
+        @include font-size(12, 40 ,1);
+        font-weight: 500;
+        color: $color-dark-gray;
+    }
+    &__num{
+        color: $color-white;
+        -webkit-text-stroke: 1px $color-dark-gray;
+        @include font-size(180, 110 ,1);
+        font-weight: 800;
+    
+    }
+}

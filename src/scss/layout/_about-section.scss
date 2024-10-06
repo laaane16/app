@@ -1,0 +1,93 @@
+.about{
+    &__content{
+        padding-top: 46px;
+        display: flex;
+    }
+    &__img{
+        position: relative;
+        display: inline-block;
+        width: 590px;
+        height: 603px;
+        object-fit: cover;
+
+    }
+    &__img-container{
+        width: max-content;
+        padding: 45px 0px 0px 45px;
+        position: relative;
+        &::before{
+            z-index: 0;
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 590px;
+            height: 603px;
+            border: 5px solid $color-beige;
+        }
+    }
+    &__info{
+        padding: 114px 0px 0px 114px ;
+    }
+    &__title{
+        position: relative;
+        padding-bottom: 40px;
+        margin-bottom: 35px;
+        &::before{
+            position: absolute;
+            bottom: 0;
+            content: '';
+            width: 85px;
+            height: 5px;
+            border-bottom: 5px solid $color-beige;
+        }
+    }
+    &__descrip{
+        margin-bottom:53px ;
+    }
+    &__more{
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        font-weight: 600;
+        @include font-size(12, 19 ,3);
+        background-color: transparent;
+        border: 0;
+        padding: 0px 27px 0px 0px;
+        margin-bottom: 97px;
+        transition: transform .2s ease-in-out ;
+        &:hover{
+            transform: translateX(5%);
+        }
+        &::after{
+            position: absolute;
+            right: 0;
+            content: '';
+            width: 17px;
+            height: 5px;
+            background-image: url('./../assets/icons/arrow.svg');
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+
+    }
+    &__list{
+        display: flex;
+
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include font-size(13, 31, 1);
+        color: $color-dark-gray;
+        font-weight: 600;
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+        &-icon{
+            margin-bottom: 33px;
+        }
+    }
+}

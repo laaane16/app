@@ -1,0 +1,13 @@
+.input{
+    border: 0px;
+    border-bottom: 1px solid $color-medium-gray;
+    @include font-size(14, 24);
+    color: $color-dark-gray;
+    background-color: transparent;
+    padding-bottom: 8px;
+    transition: border-color .2s ease-in-out;
+}
+.input:focus{
+    outline: 0;
+    border-color: $color-black;
+}
