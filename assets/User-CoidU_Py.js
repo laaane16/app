@@ -1,1 +1,0 @@
-import{j as s}from"./index-BjguW4Gv.js";const r=e=>s.jsx("main",{className:"app-content",children:s.jsx("h1",{className:"warning-message",children:"Авторизация находится на этапе разработки"})});export{r as default};
