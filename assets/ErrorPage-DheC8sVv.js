@@ -1,1 +1,0 @@
-import{j as r}from"./index-C3plfqSy.js";const a=e=>r.jsx("main",{className:"app-content",children:r.jsxs("div",{className:"error-page__content",children:[r.jsx("p",{className:"error-page__text",children:"THE PAGE YOU A LOOKING FOR CAN'T BE FOUND"}),r.jsx("p",{className:"error-page__num",children:"404"})]})});export{a as default};
