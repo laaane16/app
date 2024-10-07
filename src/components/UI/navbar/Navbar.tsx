@@ -5,6 +5,7 @@ import React from "react";
 
 interface NavbarProps {
   color: string;
+  className: string;
 }
 
 interface NavItem {
@@ -12,7 +13,7 @@ interface NavItem {
   path: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ color }) => {
+const Navbar: React.FC<NavbarProps> = ({ color, className }) => {
   const { pathname } = useLocation();
 
   const navItems: NavItem[] = [
@@ -22,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ color }) => {
   ];
 
   return (
-    <nav className="nav">
+    <nav className={`nav ${className}`}>
       <ul className={color === "white" ? "nav__list" : "nav__list black"}>
         {navItems.map((item) => (
           <li key={item.title}

@@ -4,7 +4,7 @@
   &__logo {
     transition: opacity 0.2s ease-in-out;
     &:hover {
-      opacity: .9;
+      opacity: 0.9;
     }
   }
   &__content {
@@ -15,99 +15,104 @@
   }
   &__info {
     display: flex;
+    
   }
-  &__contact {
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-    &-phone {
-      color: white;
-      @include font-size(14, 16, 1);
-      font-weight: 600;
-      margin-right: 50px;
-      transition: opacity 0.2s ease-in-out;
-      &.black {
-        color: black;
-      }
 
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-    &-whatsapp {
-      line-height: 0;
-      transition: opacity 0.2s ease-in-out;
-      &.black path {
-        fill: black;
-      }
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-  &__user {
-    display: flex;
-    align-items: center;
-    a {
-      line-height: 0px;
-      margin-right: 50px;
-    }
-    &-cart {
-      position: relative;
-      color: white;
-      transition: opacity 0.2s ease-in-out;
-      &:hover {
-        opacity: 0.8;
-      }
-      &.active path {
-        fill: $color-beige;
-      }
-      &.active{
-        color: $color-beige;
-      }
-      &.active &-count-container{
-        background-color: white;
-        border: 1px solid $color-beige;
-      }
-
-      &.black path {
-        fill: black;
-      }
-      &.black{
-        color: black;
-      }
-      &.black &-count-container{
-        background-color: white;
-        border: 1px solid black;
-      }
-      &-count-container{
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        justify-content: center;
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 800;
-        position: absolute;
-        border-radius: 50%;
-        border: 1px solid white;
-        left: 65%;
-        top: -30%;
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &-pers-acc {
-      transition: opacity 0.2s ease-in-out;
-      &:hover {
-        opacity: 0.8;
-      }
-      &.black path {
-        fill: black;
-      }
-    }
+  .burger {
+    cursor: pointer;
+    display: none;
   }
   &.absolute {
     position: absolute;
+  }
+  &__pop-up.active {
+    display: flex;
+  }
+  &__pop-up {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    .pop-up{
+
+      &__nav{
+        .nav__list{
+          flex-direction: column;
+        }
+        .nav__item:not(:last-child){
+          margin-right: 0px;
+          margin-bottom: 37px;
+        }
+      }
+    }
+  }
+
+
+  @include media-breakpoint-up("lg") {
+    & {
+      &__nav {
+        .nav__item:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+      &__info {
+        .contact {
+          margin-right: 30px;
+          &-phone {
+            margin-right: 30px;
+          }
+        }
+        .user {
+          & a:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up("md") {
+    & {
+      &__content {
+        padding: 20px 0px;
+      }
+      &__logo svg {
+        height: 40px;
+      }
+      &__info {
+        .contact {
+          margin-right: 20px;
+
+          &-phone {
+            font-size: 10px;
+          }
+        }
+      }
+      &__nav {
+        .nav__item {
+          font-size: 10px;
+          .item:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up("sm") {
+    & {
+      &__nav {
+        display: none;
+      }
+      &__info {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+    }
   }
 }

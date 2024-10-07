@@ -12,11 +12,11 @@ const MainPage: React.FC = () => {
   return (
     <main className="main app-content">
       <HeroSection />
-      <CategoriesSection/>
+      {/* <CategoriesSection/>
       <PreviewSection />
       <AboutSection/>
       <GetPhoneSection/>
-      <ContactsSection />
+      <ContactsSection /> */}
     </main>
   );
 };
