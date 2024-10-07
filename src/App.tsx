@@ -3,15 +3,6 @@ import React from 'react'
 import "./scss/main.scss";
 
 import Header from "./components/Header";
-import MainPage from "./pages/MainPage";
-import Catalog from "./pages/Catalog";
-import About from "./pages/About";
-import CardPage from "./pages/CardPage";
-import Payment from "./pages/Payment";
-import ErrorPage from "./pages/ErrorPage";
-import Cart from "./pages/Cart";
-import ContactsPage from "./pages/ContactsPage";
-import User from "./pages/User";
 
 import Footer from "./components/Footer";
 import Routing from "./routes/Routing";
